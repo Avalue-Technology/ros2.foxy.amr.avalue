@@ -182,7 +182,7 @@ Please refer to the file `FollowWaypointsClick.desktop` in the `reference` folde
 Because of ROS Foxy RViz2 does not natively support Waypoint panels/buttons, nor does it have an official Waypoint Panel Plugin.
 So we have created Python application to help us to send waypoints to the topic /waypoints manually. 
 
-**CAUTION.** After creating the shortcut, please remember to right-click it on your desktop and select "Allow execution".
+**CAUTION.** After creating the shortcut, please remember to right-click it on your desktop and select "Allow Launching".
 
 ## TF Tree (AMCL/SLAM - Nav2)
 map
