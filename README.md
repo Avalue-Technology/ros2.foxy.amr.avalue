@@ -185,16 +185,18 @@ So we have created Python application to help us to send waypoints to the topic 
 **CAUTION.** After creating the shortcut, please remember to right-click it on your desktop and select "Allow Launching".
 
 ## TF Tree (AMCL/SLAM - Nav2)
+```
 map
 └── odom_combined (From EKF: IMU + odom0)
     └── base_footprint     (IMU filter or URDF)
-        └── base_link
+	        └── base_link			
             └── wheels (or Left and right motors joint)
 
 map (AMCL or slam)
 └── odom_combined  (IMU dead reckoning)
-    └── base_footprint
+    └── base_footprint	
          └── base_link
+```
 
 ## Execution Screenshot - Follow Waypoint
 You can refer to our method to create a desktop shortcut for Ubuntu 20.04, and follow the steps below to perform AMR: Waypoint Following Operation.
