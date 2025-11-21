@@ -214,8 +214,8 @@ Step 01. Please click shortcut: ***Create Map***.
 ![AIB-NW01.FOLLOW_WAYPOINT.02.png](https://raw.githubusercontent.com/Avalue-Technology/ros2.foxy.amr.avalue/refs/heads/main/MarkdownDocumentImages/AIB-NW01.FOLLOW_WAYPOINT.02.png "AIB-NW01.FOLLOW_WAYPOINT.02.png")
 
 Step 02. Please click shortcut: ***RVIZ2 - MAP***.
-This allows us to operate the **AMR** and create a map using the **ROS2 Visualization 2** graphical interface, paired with the remote controller. 
-P.S. The **Step 01.** we opened previously was Gmapping, which will perform the SLAM mapping.
+This allows us to operate the **AMR** and create a map using the **ROS2 Visualization 2** graphical interface, paired with the remote controller.
+The **Step 01.** we opened previously was Gmapping, which will perform the SLAM mapping.
 ![AIB-NW01.FOLLOW_WAYPOINT.03.png](https://raw.githubusercontent.com/Avalue-Technology/ros2.foxy.amr.avalue/refs/heads/main/MarkdownDocumentImages/AIB-NW01.FOLLOW_WAYPOINT.03.png "AIB-NW01.FOLLOW_WAYPOINT.03.png")
 
 Step 03. Please click shortcut: ***Save MAP***.
