@@ -1,0 +1,10 @@
+# /etc/systemd/system/ros2-stack.target
+# sudo systemctl enable ros2-stack.target
+[Unit]
+Description=ROS2 Stack (Launch Several Robot Services)
+Wants=realsense.service yesense.service turn_on_avalue_robot.service rosbridge.service
+After=network-online.target
+Requires=network-online.target
+
+[Install]
+WantedBy=multi-user.target

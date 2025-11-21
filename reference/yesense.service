@@ -1,0 +1,22 @@
+# /etc/systemd/system/yesense.service
+# sudo systemctl enable yesense.service
+[Unit]
+Description=Yesense IMU Node
+After=realsense.service
+Requires=realsense.service
+
+[Service]
+Type=simple
+User=renity_admin
+WorkingDirectory=/home/renity_admin/ros2_foxy_amr_avalue
+Restart=always
+RestartSec=3
+ExecStart=/bin/bash -lc '\
+  source /home/renity_admin/ros2_foxy_amr_avalue/reference/ros2_foxy_env.sh && \
+  source /home/renity_admin/ros2_foxy_amr_avalue/install/setup.bash && \
+  ros2 launch yesense_std_ros2 yesense_node.launch.py'
+TimeoutStopSec=15
+KillSignal=SIGINT
+
+[Install]
+WantedBy=ros2-stack.target

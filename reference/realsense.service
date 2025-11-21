@@ -1,0 +1,27 @@
+# /etc/systemd/system/realsense.service
+# sudo systemctl enable realsense.service
+[Unit]
+Description=Intel RealSense D435 RGBD (realsense2_camera)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=renity_admin
+WorkingDirectory=/home/renity_admin
+Restart=always
+RestartSec=3
+# If the USB device appears slowly, you can add a wait
+ExecStartPre=/bin/bash -lc 'udevadm settle -t 10 || true'
+ExecStart=/bin/bash -lc '\
+  source /home/renity_admin/ros2_foxy_amr_avalue/reference/ros2_foxy_env.sh && \
+  source /home/renity_admin/ros2_ws/install/setup.bash && \
+  ros2 launch realsense2_camera rs_launch.py \
+    enable_rgbd:=true enable_sync:=true \
+    align_depth.enable:=true enable_color:=true enable_depth:=true'
+# Have systemd send SIGINT to ROS more gracefully when stopping
+TimeoutStopSec=15
+KillSignal=SIGINT
+
+[Install]
+WantedBy=ros2-stack.target

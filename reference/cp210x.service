@@ -1,0 +1,15 @@
+# /etc/systemd/system/cp210x.service
+# sudo systemctl daemon-reload
+# sudo systemctl enable cp210x.service
+# sudo systemctl start cp210x.service
+[Unit]
+Description=Load CP210x USB Serial Driver
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/insmod /lib/modules/5.10.104-tegra/kernel/drivers/usb/serial/cp210x.ko
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

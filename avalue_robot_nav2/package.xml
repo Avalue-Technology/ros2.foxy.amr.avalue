@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+	<name>avalue_robot_nav2</name>
+	<version>0.1.0</version>
+	<description>ROS2 Foxy - Navigation2 for NeuronBot2</description>
+	<maintainer email="renity.support@renity.com.tw">Avalue Support</maintainer>
+	<license>MIT</license>
+	<buildtool_depend>ament_cmake</buildtool_depend>
+	<depend>nav2_bringup</depend>
+	<test_depend>ament_lint_auto</test_depend>
+	<test_depend>ament_lint_common</test_depend>
+	<export>
+		<build_type>ament_cmake</build_type>
+	</export>
+</package>

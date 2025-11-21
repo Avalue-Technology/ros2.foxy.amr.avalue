@@ -1,0 +1,10 @@
+# ~/Desktop/CreateMAP.desktop
+# chmod +x ~/Desktop/CreateMAP.desktop
+[Desktop Entry]
+Type=Application
+Name=Create MAP
+Comment=Launch SLAM GMAPPING
+Exec=gnome-terminal -- bash -c "/home/renity_admin/ros2_foxy_amr_avalue/reference/run_slam_gmapping.sh; echo ''; echo '=== Press Enter to Close ==='; read"
+Terminal=false
+Icon=utilities-terminal
+Categories=Development;Robotics;

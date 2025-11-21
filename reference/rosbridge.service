@@ -1,0 +1,17 @@
+# /etc/systemd/system/rosbridge.service
+# sudo systemctl enable rosbridge.service
+[Unit]
+Description=ROS2 Rosbridge WebSocket
+After=realsense.service yesense.service turn_on_avalue_robot.service
+Requires=realsense.service yesense.service turn_on_avalue_robot.service
+
+[Service]
+ExecStart=/bin/bash -i -c "source /opt/ros/foxy/setup.bash && ros2 launch rosbridge_server rosbridge_websocket_launch.xml"
+RestartSec=5
+Restart=on-failure
+User=renity_admin
+WorkingDirectory=/home/renity_admin
+
+[Install]
+WantedBy=ros2-stack.target
+

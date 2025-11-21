@@ -1,0 +1,10 @@
+# ~/Desktop/RVIZ2-NAVIGATION.desktop
+# chmod +x ~/Desktop/RVIZ2-NAVIGATION.desktop
+[Desktop Entry]
+Type=Application
+Name=RVIZ2 – Navigation
+Comment=Open rviz2 with the NAV2 Config
+Exec=gnome-terminal -- bash -c "/home/renity_admin/ros2_foxy_amr_avalue/reference/run_rviz2_nav2.sh; echo; echo '=== Press Enter to Close ==='; read"
+Terminal=false
+Icon=rviz
+Categories=Development;Robotics;

@@ -1,0 +1,10 @@
+# ~/Desktop/StartNavigation.desktop
+# chmod +x ~/Desktop/StartNavigation.desktop
+[Desktop Entry]
+Type=Application
+Name=Start Navigation
+Comment=Launch avalue_robot_nav2 avalue_robot_nav2.launch.py
+Exec=gnome-terminal -- bash -c "/home/renity_admin/ros2_foxy_amr_avalue/reference/run_avalue_robot_nav2.sh; echo ''; echo '=== Press Enter to Close ==='; read"
+Terminal=false
+Icon=utilities-terminal
+Categories=Development;Robotics;

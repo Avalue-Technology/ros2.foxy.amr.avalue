@@ -1,0 +1,23 @@
+# /etc/systemd/system/turn_on_avalue_robot.service
+# sudo systemctl enable turn_on_avalue_robot.service
+[Unit]
+Description=Turn on Avalue Robot (STM32)
+After=yesense.service realsense.service
+Requires=yesense.service realsense.service
+
+[Service]
+Type=simple
+User=renity_admin
+WorkingDirectory=/home/renity_admin/ros2_foxy_amr_avalue
+Restart=always
+RestartSec=3
+ExecStartPre=/bin/bash -lc 'udevadm settle -t 10 || true'
+ExecStart=/bin/bash -lc '\
+  source /home/renity_admin/ros2_foxy_amr_avalue/reference/ros2_foxy_env.sh && \
+  source /home/renity_admin/ros2_foxy_amr_avalue/install/setup.bash && \
+  ros2 launch avalue_robot turn_on_avalue_robot.launch.py'
+TimeoutStopSec=20
+KillSignal=SIGINT
+
+[Install]
+WantedBy=ros2-stack.target

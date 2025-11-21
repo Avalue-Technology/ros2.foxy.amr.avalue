@@ -1,0 +1,21 @@
+# /etc/systemd/system/sllidar.service
+[Unit]
+Description=Slamtec A2M12 (sllidar_ros2)
+After=rosbridge.service
+Requires=rosbridge.service
+
+[Service]
+Type=simple
+User=renity_admin
+WorkingDirectory=/home/renity_admin/ros2_ws
+Restart=always
+RestartSec=3
+ExecStart=/bin/bash -lc '\
+  source /home/renity_admin/ros2_foxy_amr_avalue/reference/ros2_foxy_env.sh && \
+  source /home/renity_admin/ros2_ws/install/setup.bash && \
+  ros2 launch sllidar_ros2 sllidar_a2m12_launch.py'
+TimeoutStopSec=15
+KillSignal=SIGINT
+
+[Install]
+WantedBy=ros2-stack.target

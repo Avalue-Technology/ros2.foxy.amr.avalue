@@ -1,0 +1,10 @@
+# ~/Desktop/SaveMAP.desktop
+# chmod +x ~/Desktop/SaveMAP.desktop
+[Desktop Entry]
+Type=Application
+Name=Save MAP
+Comment=Launch wheeltec_nav2 save_map
+Exec=gnome-terminal -- bash -c "/home/renity_admin/ros2_foxy_amr_avalue/reference/save_slam_gmapping.sh; echo ''; echo '=== Press Enter to Close ==='; read"
+Terminal=false
+Icon=utilities-terminal
+Categories=Development;Robotics;

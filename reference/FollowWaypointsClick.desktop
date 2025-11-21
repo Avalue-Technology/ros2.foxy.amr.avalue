@@ -1,0 +1,10 @@
+# ~/Desktop/FollowWaypointsClick.desktop
+# chmod +x ~/Desktop/FollowWaypointsClick.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Follow Waypoints Click
+Comment=Launch Python waypoint collector
+Exec=gnome-terminal -- bash -ic "source /home/renity_admin/ros2_foxy_amr_avalue/install/setup.bash; python3 /home/renity_admin/ros2_foxy_amr_avalue/reference/follow_waypoints_click.py; exec bash"
+Icon=utilities-terminal
+Terminal=true
