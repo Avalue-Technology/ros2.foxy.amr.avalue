@@ -184,7 +184,7 @@ So we have created Python application to help us to send waypoints to the topic 
 
 **CAUTION.** After creating the shortcut, please remember to right-click it on your desktop and select "Allow Launching".
 
-## TF Tree (AMCL/SLAM - Nav2)
+## TF Tree (AMCL/SLAM - ROS 2 Navigation Framework)
 ```
 map
 └── odom_combined (From EKF: IMU + odom0)
